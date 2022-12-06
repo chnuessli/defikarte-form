@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { FORM_STATE, PROGRESS_STATE, useSharedState } from "../../hooks/useSharedState";
 import CreateProgress from "../CreateProgress/CreateProgress";
 import Map from "../Map/Map";
+import SearchBox from "../SearchBox/SearchBox";
 
 const CreateStepOne = () => {
   const { t } = useTranslation();
@@ -21,6 +22,7 @@ const CreateStepOne = () => {
     <div className='container-fluid vh-100 d-flex flex-column'>
       <div className="row">
         <CreateProgress title={t('step_one')} progress={progressState} />
+        <SearchBox />
       </div>
       <div className="row flex-grow-1" >
         <Map />
